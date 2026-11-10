@@ -1,30 +1,100 @@
-.painel-perfil {
-  background: #4F46E5;
-  border-radius: 30px !important;
+
+:root {
+    padding: 0;
 }
 
+body {
+    min-height: 100vh;
+}
+
+/* Container geral */
+.perfil-layout {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Alinhamento das colunas */
+.perfil-layout > .row {
+    align-items: start;
+}
+
+/* Perfil */
+.painel-perfil {
+    background: #4F46E5;
+    border-radius: 30px !important;
+    height: fit-content;
+}
+
+/* Indicadores */
+.frequencia {
+    align-self: auto;
+    width: 100%;
+}
+
+/* Menu */
+nav {
+    align-self: auto;
+}
+
+/* Foto */
 .foto-container {
-  width: 132px;
-  height: 132px;
-  border: 5px solid white;
-  outline: 5px solid rgba(255,255,255,0.35);
-  background: linear-gradient(135deg, #ff8c91, #ffb45e, #79c9b5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  margin: 5px;
+    width: 132px;
+    height: 132px;
+    border: 5px solid white;
+    outline: 5px solid rgba(255,255,255,0.35);
+    background: linear-gradient(135deg, #ff8c91, #ffb45e, #79c9b5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
 }
 
 .foto-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #uploadFoto {
-  display: none;
+    display: none;
+}
+
+.btn-tracejado {
+    border-style: dashed !important;
+}
+
+/* Barra de progresso */
+.progress-bar {
+    transform-origin: left;
+    animation: grow 1.1s cubic-bezier(.2,.8,.2,1) .15s both;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .progress-bar {
+        animation: none;
+    }
+}
+
+/* Celulares */
+@media (max-width: 767.98px) {
+    .perfil-layout {
+        padding: 1rem;
+    }
 }
