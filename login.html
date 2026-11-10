@@ -9,14 +9,13 @@
 
        <style>
         .geral {
-            background-color: #4f46e5;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 56px);
-            margin: 0;
-
+          background-color: #4f46e5;
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
         }
 
         .teladelogin {
@@ -28,9 +27,15 @@
             box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
         }
 
-        .nomeinicial {
+        .logo {
             margin-bottom: 25px;
-            color: #4f46e5;
+            max-width: 60%;
+            
+        }
+        .nome {
+            margin-bottom: 25px;
+
+
         }
 
         .form-control {
@@ -49,61 +54,16 @@
         .botao:hover {
             background-color: #3730a3;
         }
-        .minha-navbar {
-    background-color: #fcfcfc;
-        }
-        .minha-navbar .navbar-brand{
-            color: black;
-        }
-        .minha-navbar .nav-link{
-            color: black;
-        }
-        .minha-navbar .nav-link:hover {
-            color:#4f46e5 ;
-        }
+
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    
-  <nav class="navbar navbar-expand-lg navbar-dark minha-navbar">
-
-    <div class="container-fluid">
-
-        <a class="navbar-brand" href="#">Educonnect</a>
-
-        <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-
-            <div class="navbar-nav ms-auto">
-
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="telainicial.html">Home</a>
-
-                <a class="nav-link" href="#">Sobre nós</a>
-
-                <a class="nav-link" href="#">Entre em contato</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-   </nav>
-
-
+  
     <!-- Tela de Login -->
     <div class="geral">
     <div class="teladelogin">
-      <h1 class="nomeinicial">Login</h1>
+      <img class="logo" src="c:\Users\a92309303\Documents\logoeduconectof.png" alt="logo Educonnect">
+      <h1  class="nome">Educonnect</h1>
       <form class="form">
         <label for="matricula"> Matricula:</label><br>
         <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Digite sua matricula"> 
