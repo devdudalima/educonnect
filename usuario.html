@@ -13,33 +13,171 @@
 <body>
 
 
-<aside class="col-lg-4">
-  <div class="painel-perfil sticky-lg-top text-white text-center rounded-5 px-4 py-5" style="top:1.5rem">
 
-    <!-- Foto de perfil -->
-    <div class="position-relative d-inline-block mb-3">
-      <div class="foto-container rounded-circle">
-        <span id="iniciaisPerfil">RO</span>
-        <img src="adicione sua foto" id="fotoPerfil" alt="Foto de perfil" class="rounded-circle" style="display: none;">
-    </div>
+<!-- CONTAINER PRINCIPAL -->
+<div class="container-fluid perfil-layout">
 
-      <!-- Indicador online -->
-      <span class="position-absolute bottom-0 end-0 p-2 bg-success border border-3 border-white rounded-circle">
-        <span class="visually-hidden">Online</span>
-      </span>
+  <div class="row g-4 align-items-start">
 
-    </div>
-    <!-- Botão alterar foto -->
-    <div class="mb-3">
-      <label for="uploadFoto" class="btn btn-light btn-sm rounded-pill px-3">Alterar foto</label>
-      <input type="file" id="uploadFoto" accept="image/*" class="d-none">
-    </div>
+    <!-- COLUNA ESQUERDA: PERFIL -->
+    <aside class="col-lg-4">
 
-    <!-- Informações do aluno -->
-    <h1 class="h3 fw-bold mb-1">Ricardo Oliveira</h1>
-    <p class="text-white-50 mb-3">3º Ano Ensino Médio</p>
-    <span class="badge rounded-pill bg-white bg-opacity-25 fw-medium px-3 py-2">RA: 2024.0892-X</span>
+      <div class="painel-perfil sticky-lg-top text-white text-center rounded-5 px-4 py-5" style="top:1.5rem">
+
+        <!-- Foto de perfil -->
+        <div class="position-relative d-inline-block mb-3">
+          <div class="foto-container rounded-circle">
+            <span id="iniciaisPerfil">RO</span>
+            <img src="adicione sua foto" id="fotoPerfil" alt="Foto de perfil" class="rounded-circle" style="display:none;">
+          </div>
+          <!-- Indicador online -->
+          <span class="position-absolute bottom-0 end-0 p-2 bg-success border border-3 border-white rounded-circle"><span class="visually-hidden">Online</span>
+          </span>
+        </div>
+
+        <!-- Botão alterar foto -->
+        <div class="mb-3">
+          <label for="uploadFoto" class="btn btn-light btn-sm rounded-pill px-3">Alterar foto</label>
+          <input type="file" id="uploadFoto" accept="image/*" class="d-none">
+        </div>
+
+        <!-- Informações do aluno -->
+        <h1 class="h3 fw-bold mb-1">Ricardo Oliveira</h1>
+        <p class="text-white-50 mb-3">3º Ano Ensino Médio</p>
+        <span class="badge rounded-pill bg-white bg-opacity-25 fw-medium px-3 py-2">RA: 2024.0892-X</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- COLUNA DIREITA: CONTEÚDO PRINCIPAL -->
+    <main class="col-lg-8 d-flex flex-column gap-4">
+
+      <!-- NÍVEL E CONQUISTAS -->
+      <section class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
+                <div class="d-flex align-items-center gap-3">
+                <div class="tam-52 flex-shrink-0 d-flex align-items-center justify-content-center rounded-4 bg-warning-subtle text-warning fs-4"><i class="bi bi-trophy"></i></div>
+                <div>
+                    <div class="small text-body-secondary text-uppercase">Nível atual</div>
+                    <div class="fs-5 fw-bold">Mestre Aprendiz</div>
+                    <div class="small text-body-secondary">Nível 14</div>
+                </div>
+            </div>
+
+            <div class="text-sm-end">
+              <div class="small text-body-secondary text-uppercase">Total de pontos</div>
+              <div class="fs-4 fw-bold text-primary">12.450 XP</div>
+            </div>
+
+          </div>
+
+          <!-- Barra de progresso -->
+          <div class="d-flex justify-content-between small fw-medium mt-4 mb-2">
+            <span class="text-body-secondary">Progresso para Nível 15</span>
+            <span>85%</span>
+          </div>
+
+          <div class="progress rounded-pill" style="height:14px" role="progressbar" aria-label="Progresso para o Nível 15" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width:85%"></div>
+          </div>
+
+          <!-- Conquistas -->
+          <h2 class="h6 fw-bold mt-4 mb-3">Conquistas Recentes</h2>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn tam-64 rounded-4 border-0 fs-4 bg-primary-subtle text-primary" title="Resposta rápida"> <i class="bi bi-lightning-charge-fill"></i></button>
+            <button class="btn tam-64 rounded-4 border-0 fs-4 bg-warning-subtle text-warning" title="Destaque da turma"><i class="bi bi-star-fill"></i></button>
+            <button class="btn tam-64 rounded-4 border-0 fs-4 bg-success-subtle text-success" title="Presença perfeita"><i class="bi bi-calendar-check-fill"></i></button>
+            <button class="btn tam-64 rounded-4 border-0 fs-4 bg-danger-subtle text-danger" title="Mestre do laboratório"><i class="bi bi-eyedropper"></i></button>
+            <button class="btn btn-tracejado tam-64 rounded-4 border border-2 border-secondary-subtle fs-4 text-body-secondary" title="Ver todas as conquistas"><i class="bi bi-plus-lg"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDICADORES: FREQUÊNCIA E MÉDIA -->
+      <div class="frequencia row row-cols-1 row-cols-md-2 g-4">
+
+        <!-- Frequência -->
+        <div class="col">
+          <div class="card border-0 shadow-sm rounded-4 h-100">
+            <div class="card-body d-flex align-items-center gap-3 p-4">
+              <div class="tam-60 flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary fs-4"><i class="bi bi-graph-up-arrow"></i></div>
+              <div>
+                <div class="small text-body-secondary"> Frequência</div>
+                <div class="fs-2 fw-bold lh-1">94,5%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Média Geral -->
+        <div class="col">
+          <div class="card border-0 shadow-sm rounded-4 h-100">
+            <div class="card-body d-flex align-items-center gap-3 p-4">
+              <div class="tam-60 flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-roxo-suave fs-4"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <div class="small text-body-secondary">Média Geral</div>
+                <div class="fs-2 fw-bold lh-1">8,9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- MENU DE CONFIGURAÇÕES -->
+      <nav class="card border-0 shadow-sm rounded-4 p-2" aria-label="Minha conta">
+        <div class="row g-1">
+
+          <!-- Dados pessoais -->
+          <div class="col-md-6 list-group">
+            <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
+              <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-body-secondary"><i class="bi bi-person-fill"></i></span>
+              <span class="flex-grow-1">Dados Pessoais</span><i class="bi bi-chevron-right small text-body-secondary"></i>
+            </button>
+          </div>
+
+          <!-- Notificações -->
+          <div class="col-md-6 list-group">
+            <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
+              <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-body-secondary"><i class="bi bi-bell-fill"></i></span>
+              <span class="flex-grow-1">Configurações de Notificação</span><i class="bi bi-chevron-right small text-body-secondary"></i>
+            </button>
+          </div>
+
+          <!-- Segurança -->
+          <div class="col-md-6 list-group">
+            <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
+              <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-body-secondary"><i class="bi bi-shield-lock-fill"></i></span>
+              <span class="flex-grow-1">Segurança e Senha</span><i class="bi bi-chevron-right small text-body-secondary"></i>
+            </button>
+          </div>
+
+          <!-- Documentos -->
+          <div class="col-md-6 list-group">
+            <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
+              <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-body-secondary"><i class="bi bi-file-earmark-text-fill"></i></span>
+              <span class="flex-grow-1">Documentos Escolares</span><i class="bi bi-chevron-right small text-body-secondary"></i>
+            </button>
+          </div>
+
+          <!-- Sair da conta -->
+          <div class="col-12 list-group mt-2">
+            <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-bold text-danger text-start">
+              <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-danger-subtle"><i class="bi bi-box-arrow-right"></i></span>
+              <span>Sair da Conta</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- RODAPÉ -->
+      <footer class="text-center small text-body-secondary">
+        EduConnect v2.4.1
+      </footer>
+    </main>
   </div>
-</aside>
-
+</div>
 </html>
