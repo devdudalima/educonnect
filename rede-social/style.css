@@ -173,11 +173,13 @@ nav a:hover {
 #container-reviews {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
 #reviews h2 {
     margin-top: 30px;
+    margin-bottom: 40px;
     font-size: 1.4em;
 }
 
@@ -250,6 +252,16 @@ nav a:hover {
     justify-self: center;
 }
 
+.classe.filme {
+    background-color: rgb(252, 234, 234);
+    color: rgb(192, 21, 21);
+}
+
+.classe.serie {
+    background-color: #dcfdf2;
+    color: #10B981;
+}
+
 .card-review .estrelas {
     grid-column: 1 / span 3;
     text-align: start;
@@ -268,4 +280,35 @@ nav a:hover {
     font-size: 1em;
     font-weight: 500;
     color: rgb(65, 65, 65);
+}
+
+.barra-horizontal {
+    width: 90%;
+    height: 2px;
+    place-self: center center;
+
+    grid-column: 1 / span 3;
+    background-color: rgba(238, 238, 238, 0.534);
+    
+}
+
+.interacao {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    gap: 7px;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.fa-comment {
+    margin-left: 5px;
+}
+
+
+
+.curtido {
+    color: red;
 }
