@@ -1,0 +1,71 @@
+/* Fonte do site e cor principal (azul) */
+  :root{
+    --bs-body-font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --bs-primary:#4F46E5;
+    --bs-primary-rgb:91,75,240;
+      padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  /* Painel azul da esquerda */
+  .painel-perfil {
+      background:#4F46E5;
+      width: 350px;
+      flex-shrink: 0;
+      margin: 0;
+      padding: 1rem;
+      border-radius: 30px;
+  }
+
+  .container-perfil {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .formdados {
+    flex: 1;         /* ocupa o restante */
+    background: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  
+  /* Foto do aluno: círculo de 132px com as iniciais */
+  .foto-aluno {
+    width: 132px;
+    height: 132px;
+    border: 5px solid white;
+    outline: 5px solid rgba(255,255,255,0.35);
+    background: linear-gradient(135deg, #ff8c91, #ffb45e, #79c9b5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
+  }
+
+
+  /* Tamanho fixo do quadradinho de ícone que fica ao lado dos títulos das seções */
+  .tam-40 {
+    width:40px;
+    height:40px;
+}
+
+  /* O botão "btn-primary" do Bootstrap */
+  .btn-primary {
+    --bs-btn-bg:#4F46E5;
+  }
+
+  /* Campo selecionado: borda e brilho em azul */
+  .form-control:focus,.form-select:focus{
+    border-color:#4F46E5;box-shadow:0 0 0 .25rem rgba(91,75,240,.2)
+}

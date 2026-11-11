@@ -12,8 +12,6 @@
 </head>
 <body>
 
-
-
 <!-- CONTAINER PRINCIPAL -->
 <div class="container-fluid perfil-layout">
 
@@ -30,15 +28,10 @@
             <span id="iniciaisPerfil">RO</span>
             <img src="adicione sua foto" id="fotoPerfil" alt="Foto de perfil" class="rounded-circle" style="display:none;">
           </div>
+
           <!-- Indicador online -->
           <span class="position-absolute bottom-0 end-0 p-2 bg-success border border-3 border-white rounded-circle"><span class="visually-hidden">Online</span>
           </span>
-        </div>
-
-        <!-- Botão alterar foto -->
-        <div class="mb-3">
-          <label for="uploadFoto" class="btn btn-light btn-sm rounded-pill px-3">Alterar foto</label>
-          <input type="file" id="uploadFoto" accept="image/*" class="d-none">
         </div>
 
         <!-- Informações do aluno -->
@@ -49,7 +42,6 @@
         </div>
 
     </aside>
-
 
     <!-- COLUNA DIREITA: CONTEÚDO PRINCIPAL -->
     <main class="col-lg-8 d-flex flex-column gap-4">
@@ -135,7 +127,7 @@
           <div class="col-md-6 list-group">
             <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
               <span class="tam-40 flex-shrink-0 d-flex align-items-center justify-content-center rounded-3 bg-body-secondary"><i class="bi bi-person-fill"></i></span>
-              <span class="flex-grow-1">Dados Pessoais</span><i class="bi bi-chevron-right small text-body-secondary"></i>
+              <a href="dados_pessoais.html" class="flex-grow-1 d-block text-start text-black text-decoration-none small fw-semibold mb-">Dados Pessoais</a><i class="bi bi-chevron-right small text-body-secondary"></i>
             </button>
           </div>
 
@@ -146,7 +138,7 @@
               <span class="flex-grow-1">Configurações de Notificação</span><i class="bi bi-chevron-right small text-body-secondary"></i>
             </button>
           </div>
-
+          
           <!-- Segurança -->
           <div class="col-md-6 list-group">
             <button class="list-group-item list-group-item-action border-0 rounded-4 d-flex align-items-center gap-3 p-3 fw-semibold text-start">
