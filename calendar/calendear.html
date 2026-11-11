@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <div class="calendario">
+
+        <!-- Cabeçalho -->
+        <div class="cabecalho">
+
+            <div class="topo">
+
+                <h1>Calendário</h1>
+
+                <div class="visualizacao">
+                    <button id="botaoMes" class="ativo">Mês</button>
+                    <button id="botaoSemana">Semana</button>
+                </div>
+
+            </div>
+
+            <div class="navegacao">
+
+                <h2 id="mesAno"></h2>
+
+                <div>
+                    <button id="anterior">‹</button>
+                    <button id="proximo">›</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Calendário -->
+        <div class="conteudo">
+
+            <div class="dias-semana" id="diasSemana">
+                <div>DOM</div>
+                <div>SEG</div>
+                <div>TER</div>
+                <div>QUA</div>
+                <div>QUI</div>
+                <div>SEX</div>
+                <div>SÁB</div>
+            </div>
+
+            <div class="dias" id="dias"></div>
+
+            <!-- Legenda -->
+            <div class="legenda">
+
+                <span><i class="ponto prova"></i> Provas</span>
+                <span><i class="ponto evento"></i> Eventos</span>
+                <span><i class="ponto feriado"></i> Feriados</span>
+                <span><i class="ponto tarefa"></i> Tarefas</span>
+
+            </div>
+
+            <!-- Lista de eventos -->
+            <div class="eventos">
+
+                <div class="titulo-eventos">
+                    <h3>Eventos do Dia</h3>
+                    <span id="dataSelecionada"></span>
+                </div>
+
+                <div id="listaEventos"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="calendario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

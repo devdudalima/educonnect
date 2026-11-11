@@ -1,0 +1,282 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f4fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .pagina {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+
+        .calendario {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Cabeçalho */
+
+        .cabecalho {
+            background: #4f46e5;
+            color: white;
+            padding: 25px;
+        }
+
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .topo h1 {
+            font-size: 25px;
+            margin: 0;
+        }
+
+        .visualizacao {
+            display: flex;
+            background: rgba(255,255,255,0.18);
+            padding: 4px;
+            border-radius: 10px;
+        }
+
+        .visualizacao button {
+            border: none;
+            background: transparent;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .visualizacao button.ativo {
+            background: white;
+            color: #4f46e5;
+        }
+
+        /* Navegação */
+
+        .navegacao {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+
+        .navegacao h2 {
+            font-size: 19px;
+            margin: 0;
+        }
+
+        .navegacao button {
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        /* Corpo do calendário */
+
+        .conteudo {
+            padding: 25px;
+        }
+
+        .dias-semana, .dias {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            gap: 8px;
+        }
+
+        .dias-semana {
+            margin-bottom: 15px;
+        }
+
+        .dias-semana div {
+            color: #999;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .dia {
+            min-height: 65px;
+            border: none;
+            background: white;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .dia:hover {
+            background: #f0efff;
+        }
+
+        .dia.selecionado {
+            background: #4f46e5;
+            color: white;
+            box-shadow: 0 4px 10px rgba(79,70,229,0.3);
+        }
+
+        .dia.outro-mes {
+            color: #c5c5c5;
+        }
+
+        .marcadores {
+            display: flex;
+            gap: 3px;
+        }
+
+        .ponto {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .prova { background: #ef4444; }
+        .evento { background: #3b82f6; }
+        .feriado { background: #22c55e; }
+        .tarefa { background: #f59e0b; }
+
+        /* Legenda */
+
+        .legenda {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 18px;
+        }
+
+        .legenda span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Eventos */
+
+        .eventos {
+            margin-top: 30px;
+        }
+
+        .titulo-eventos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .titulo-eventos h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .titulo-eventos span {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .card-evento {
+            display: flex;
+            align-items: center;
+            background: #f8f8fc;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            gap: 12px;
+        }
+
+        .barra {
+            width: 4px;
+            height: 42px;
+            border-radius: 5px;
+        }
+
+        .informacoes {
+            flex: 1;
+        }
+
+        .informacoes h4 {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 5px;
+        }
+
+        .informacoes p {
+            font-size: 11px;
+            color: #888;
+            margin: 0;
+        }
+
+        .tipo {
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 8px;
+            border-radius: 6px;
+        }
+
+        .tipo-prova { color: #ef4444; background: #fee2e2; }
+        .tipo-evento { color: #3b82f6; background: #dbeafe; }
+        .tipo-feriado { color: #16a34a; background: #dcfce7; }
+        .tipo-tarefa { color: #d97706; background: #fef3c7; }
+
+        .vazio {
+            text-align: center;
+            color: #999;
+            padding: 25px;
+            background: #f8f8fc;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .pagina {
+                margin: 10px auto;
+                padding: 8px;
+            }
+
+            .cabecalho {
+                padding: 20px;
+            }
+
+            .conteudo {
+                padding: 15px;
+            }
+
+            .dia {
+                min-height: 48px;
+                font-size: 12px;
+            }
+
+            .dias-semana, .dias {
+                gap: 3px;
+            }
+
+            .topo h1 {
+                font-size: 21px;
+            }
+        }
