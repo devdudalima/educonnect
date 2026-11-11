@@ -1,38 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Educonnect</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        .minha-navbar {
+            background-color: white;
+            padding: 12px 30px;
+            box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.10);
+        }
 
+        .logo {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            margin-right: 8px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 23px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .navbar-brand:hover {
+            color: #3730a3;
+        }
+
+        .minha-navbar .nav-link {
+            color: #333;
+            margin-left: 15px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .minha-navbar .nav-link:hover {
+            color: #4f46e5;
+        }
+
+        .navbar-toggler {
+            border-color: #4f46e5;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.2);
+        }
+
+        @media (max-width: 991px) {
+            .minha-navbar {
+                padding: 12px 18px;
+            }
+
+            .minha-navbar .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+        }
     </style>
-
 </head>
+
 <body>
- <nav class="navbar md:navbar-expand bg-1 fg-2">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Left Drawer</a>
-    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-    <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
-    <div class="drawer-header">
-        <h5 class="drawer-title" id="navbarLeftDrawerLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-    </div>
-      <div class="drawer-body">
-        <ul class="navbar-nav me-auto mb-2 md:mb-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="calendar.html">calendario</a></li>
-          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Disabled</a></li>
-        </ul>
-      </div>
-    </dialog>
-  </div>
- </nav>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg minha-navbar">
+
+        <div class="container-fluid">
+
+            <!-- Logo e nome -->
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="logoeduconectof.png" alt="Logo Educonnect">
+                Educonnect
+            </a>
+
+            <!-- Botão para celular -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendar/calendear.html">Calendário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Diversão</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">notificações</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Perfil</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
