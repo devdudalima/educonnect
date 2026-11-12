@@ -34,10 +34,54 @@ header h1{
 
 #cabecalho {
     background-color: white;
-    padding: 28px ;
+    padding: 28px;
     padding-bottom: 38px;
     border-end-end-radius: 30px;
     border-end-start-radius: 30px;
+
+    display: grid;
+    grid-template-columns: 100px auto auto 80px;
+    grid-template-rows: auto auto;
+
+
+    gap: 25px;
+}
+
+#cabecalho h1 {
+    grid-column: 1;
+    place-self: center center;
+    margin: 0;
+}
+
+#cabecalho .foto-perfil {
+    grid-column: 4;
+    place-self: start center;
+}
+.info-perfil {
+    gap: 2px;
+    place-self: center end;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.info-perfil p {
+    margin: 0;
+}
+
+.xp {
+    font-weight: 600;
+    color: #4F46E5;
+}
+
+.xp svg{
+    color: orange;
+}
+
+#cabecalho .input-container {
+    grid-column: 1 / span 4;
+    place-self: center center;
 }
 
 #publicar {
@@ -107,6 +151,8 @@ nav a {
     text-decoration: none;
     background-color: white;
     padding: 10px 22px;
+    width: 80%;
+    text-align: center;
 
     border-radius: 20px;
     color: rgb(172, 172, 172);
@@ -244,7 +290,7 @@ nav a:hover {
     text-align: start;
     padding-left: 10px;
 
-    font-size: 1em;
+    font-size: 1.18em;
 }
 
 .card-review .classe {
@@ -252,7 +298,7 @@ nav a:hover {
     color: var(--cor-04);
     font-weight: 500;
     font-size: 0.8em;
-    padding: 5px 0;
+    padding: 8px 0;
     border-radius: 15px;
     width: 95px;
     justify-self: center;
@@ -264,7 +310,7 @@ nav a:hover {
 }
 
 .classe.serie {
-    background-color: #dcfdf2;
+    background-color: #d4f8ec3a;
     color: #10B981;
 }
 
@@ -287,13 +333,90 @@ nav a:hover {
     border-radius: 15px;
 }
 
+.card-destaque {
+    display: grid;
+    grid-template-columns: 75px 1fr 1fr;
+    grid-template-rows: 75% 12% 12% ;
+
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.041),
+            rgba(0, 0, 0, 0.877)
+        ),url(imagens/feira-inovacao.png);
+    background-size: cover;
+    height: 300px;
+
+    color: white;
+
+    p {
+        color: white !important;
+    }
+}
+
+.card-destaque h3 {
+    place-self: end start;
+}
+
+.card-destaque:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-destaque .titulo {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    text-align: start;
+    padding-left: 10px;
+
+    font-size: 1.18em;
+}
+
+.card-destaque .classe {
+    grid-row: 1;
+    grid-column: 1 ;
+    place-self: end start;
+    margin-left: 38px;
+
+    background-color: #eaeefd;
+    color: var(--cor-04);
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 5px 0;
+    border-radius: 15px;
+    width: 95px;
+    justify-self: center;
+}
+.classe.destaque {
+    background-color: rgb(253, 154, 5) !important;
+}
+
+.card-destaque .descricao {
+
+    grid-column: 1 / span 3;
+    text-align: start;
+    padding-left: 10px;
+    place-self: end start;
+
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+}
+
 /* ===== RESPONSIVIDADE PARA DESKTOP ===== */
 
 
 @media screen and (min-width: 1150px) {
 
     #cabecalho {
-        padding: 60px 100px;
+        padding: 40px 100px 80px 100px;
     }
 
     /* BARRA DE PESQUISA */
@@ -350,6 +473,17 @@ nav a:hover {
         margin: 0 auto 70px;
     }
 
+    .card-destaque {
+        height: 500px;
+        padding: 60px;
+
+    }
+
+    .card-destaque h3 {
+        font-size: 1.5em !important;
+        margin: 0;
+    }
+
     .card-review {
         display: grid;
         grid-template-columns: 75px 1.8fr 2fr;
@@ -395,6 +529,13 @@ nav a:hover {
         grid-column: 1;
         grid-row: 2;
         margin-left: 20px;
+        padding: 8px;
+    }
+
+    .card-destaque .classe {
+        padding: 8px;
+        margin-bottom: 0;
+        margin-left: 45px;
     }
 
     /* TÍTULO */
