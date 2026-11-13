@@ -1,0 +1,180 @@
+/* ==========================================================
+   BASE.CSS — estilos COMPARTILHADOS pelas telas
+   (usuario.html e dados_pessoais.html)
+   Tudo o que aparece nas duas telas mora aqui, para que
+   cores e tamanhos sejam sempre idênticos.
+   ========================================================== */
+
+
+/* ---------- 1. CORES E FONTE DO SITE ---------- */
+:root {
+  --bs-body-font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-primary: #4F46E5;               /* cor principal (índigo) */
+  --bs-primary-rgb: 79, 70, 229;       /* a MESMA cor em RGB (o Bootstrap usa as duas formas) */
+  --bs-primary-bg-subtle: #e0e7ff;     /* versão clara da cor principal (fundo dos ícones) */
+}
+
+
+/* ---------- 2. PÁGINA ---------- */
+body {
+  min-height: 100vh;
+  background: var(--bs-tertiary-bg);   /* cinza bem claro atrás dos cartões */
+}
+
+/* Espaço em cima e embaixo do conteúdo (usado junto com a classe "container") */
+.pagina {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Empilha os filhos em coluna, com espaço entre eles (coluna principal / formulário) */
+.pilha {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* ---------- 3. PAINEL DO PERFIL (coluna da esquerda) ---------- */
+.painel-perfil {
+  background: var(--bs-primary);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 30px;
+  height: fit-content;
+}
+
+/* Em telas grandes: largura máxima de 350px e acompanha a rolagem */
+@media (min-width: 992px) {
+  .painel-perfil {
+    max-width: 350px;
+    position: sticky;
+    top: 1.5rem;
+    z-index: 1020;
+  }
+}
+
+/* Caixa que segura a foto e a bolinha "online" */
+.foto-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Foto do aluno: círculo de 132px com as iniciais (ou a foto, se houver) */
+.foto-aluno {
+  width: 132px;
+  height: 132px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  outline: 5px solid rgba(255, 255, 255, 0.35);   /* anel claro em volta da borda */
+  background: linear-gradient(135deg, #ff8c91, #ffb45e, #79c9b5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.foto-aluno img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bolinha verde de "online" no canto da foto */
+.indicador-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--bs-success);
+}
+
+/* Textos do painel: nome, série e RA */
+.perfil-nome {
+  margin: 0 0 0.25rem;
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .perfil-nome { font-size: 1.75rem; }
+}
+.perfil-serie {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.perfil-ra {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.75em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+/* ---------- 4. CARTÃO BRANCO ---------- */
+.cartao {
+  padding: 1.5rem;
+  background: var(--bs-body-bg);
+  border-radius: var(--bs-border-radius-xl);   /* 1rem */
+  box-shadow: var(--bs-box-shadow-sm);         /* sombra leve */
+}
+
+
+/* ---------- 5. QUADRADINHOS E CÍRCULOS DE ÍCONE ----------
+   "tam" = tamanho. Cada tamanho já traz a forma que usamos:
+   tam-40 = quadrado pequeno (menu e títulos das seções)
+   tam-52 = quadrado do troféu
+   tam-60 = círculo (Frequência e Média Geral)
+   tam-64 = quadrado das conquistas                          */
+.tam-40, .tam-52, .tam-60, .tam-64 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+}
+.tam-40 { width: 40px; height: 40px; border-radius: var(--bs-border-radius-lg); }
+.tam-52 { width: 52px; height: 52px; border-radius: var(--bs-border-radius-xl); font-size: 1.5rem; }
+.tam-60 { width: 60px; height: 60px; border-radius: 50%;                        font-size: 1.5rem; }
+.tam-64 { width: 64px; height: 64px; border-radius: var(--bs-border-radius-xl); font-size: 1.5rem; }
+
+/* Cores dos ícones: fundo claro + ícone na cor forte */
+.cor-primaria { background: var(--bs-primary-bg-subtle); color: var(--bs-primary); }   /* índigo */
+.cor-amarelo  { background: var(--bs-warning-bg-subtle); color: var(--bs-warning); }
+.cor-verde    { background: var(--bs-success-bg-subtle); color: var(--bs-success); }
+.cor-vermelho { background: var(--bs-danger-bg-subtle);  color: var(--bs-danger); }
+.cor-roxo     { background: #f1e6ff; color: #8b3df0; }      /* o Bootstrap não tem roxo pronto */
+.cor-neutra   { background: var(--bs-secondary-bg); }       /* cinza, sem cor no ícone */
+
+
+/* ---------- 6. BOTÃO PRINCIPAL E CAMPOS ---------- */
+/* O "btn-primary" do Bootstrap nasce azul: aqui ele segue a cor principal (inclusive borda, hover e clique) */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #4338ca;
+  --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #3730a3;
+  --bs-btn-active-border-color: #3730a3;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: 79, 70, 229;
+}
+
+/* Campo selecionado: borda e brilho na cor principal */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.2);
+}

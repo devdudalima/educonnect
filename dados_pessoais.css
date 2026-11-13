@@ -1,71 +1,90 @@
-/* Fonte do site e cor principal (azul) */
-  :root{
-    --bs-body-font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    --bs-primary:#4F46E5;
-    --bs-primary-rgb:91,75,240;
-      padding: 0;
-  }
-
-  body {
-    min-height: 100vh;
-  }
-
-  /* Painel azul da esquerda */
-  .painel-perfil {
-      background:#4F46E5;
-      width: 350px;
-      flex-shrink: 0;
-      margin: 0;
-      padding: 1rem;
-      border-radius: 30px;
-  }
-
-  .container-perfil {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  .formdados {
-    flex: 1;         /* ocupa o restante */
-    background: #fff;
-    border-radius: 30px;
-    text-decoration: none;
-  }
-
-  
-  /* Foto do aluno: círculo de 132px com as iniciais */
-  .foto-aluno {
-    width: 132px;
-    height: 132px;
-    border: 5px solid white;
-    outline: 5px solid rgba(255,255,255,0.35);
-    background: linear-gradient(135deg, #ff8c91, #ffb45e, #79c9b5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    margin: 5px;
-  }
+/* ==========================================================
+   DADOS_PESSOAIS.CSS — só o que é exclusivo da tela de Dados Pessoais.
+   (painel, cartões, ícones, cores e botão principal estão no base.css)
+   ========================================================== */
 
 
-  /* Tamanho fixo do quadradinho de ícone que fica ao lado dos títulos das seções */
-  .tam-40 {
-    width:40px;
-    height:40px;
+/* ---------- PAINEL: link e botão extras ---------- */
+/* Link "Voltar ao perfil" no topo do painel */
+.link-voltar,
+.link-voltar:hover {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  text-decoration: none;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: #fff;
 }
 
-  /* O botão "btn-primary" do Bootstrap */
-  .btn-primary {
-    --bs-btn-bg:#4F46E5;
-  }
-
-  /* Campo selecionado: borda e brilho em azul */
-  .form-control:focus,.form-select:focus{
-    border-color:#4F46E5;box-shadow:0 0 0 .25rem rgba(91,75,240,.2)
+/* Botão "Alterar foto" */
+.botao-foto {
+  margin-top: 1.5rem;
+  padding-inline: 1rem;
+  border-radius: 50rem;
+  font-weight: 600;
 }
+
+
+/* ---------- CABEÇALHO DA PÁGINA ---------- */
+/* Trilha "Perfil / Dados Pessoais" */
+.breadcrumb {
+  margin-bottom: 0.5rem;
+  font-size: 0.875em;
+}
+.breadcrumb a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+.titulo-pagina {
+  margin-bottom: 0.25rem;
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .titulo-pagina { font-size: 1.75rem; }
+}
+.subtitulo-pagina {
+  margin-bottom: 1.5rem;
+  color: var(--bs-secondary-color);
+}
+
+/* Caixa verde "Dados salvos com sucesso!" */
+.aviso { border-radius: var(--bs-border-radius-xl); }
+
+
+/* ---------- SEÇÕES DO FORMULÁRIO ---------- */
+/* Título da seção: quadradinho de ícone + texto */
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.titulo-secao--colado { margin-bottom: 0.25rem; }   /* quando há um textinho de ajuda logo abaixo */
+
+/* Texto acima de cada campo */
+.rotulo {
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+
+/* ---------- BOTÕES DO FINAL ---------- */
+/* Cancelar + Salvar: um embaixo do outro no celular, lado a lado (à direita) no computador */
+.acoes-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 576px) {
+  .acoes-formulario { flex-direction: row; justify-content: flex-end; }
+}
+.acoes-formulario .btn {
+  padding-inline: 1.5rem;
+  border-radius: 50rem;
+}
+.acoes-formulario .btn-primary { font-weight: 600; }
