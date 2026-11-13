@@ -24,11 +24,19 @@
 
         /* Cabeçalho */
 
+       /* Cabeçalho roxo */
         .cabecalho {
-            background: #4f46e5;
+            background: linear-gradient(135deg, #6558ed, #a34df0);
             color: white;
-            padding: 25px;
+            padding: 25px 20px 75px;
+            border-radius: 25px 25px 45px 45px;
+            position: relative;
         }
+        .cabecalho h1,
+        .cabecalho h2 {
+           color: white;
+        }
+
 
         .topo {
             display: flex;
@@ -90,7 +98,23 @@
         /* Corpo do calendário */
 
         .conteudo {
-            padding: 25px;
+           background: #f4f4fa;
+           margin-top: -45px;
+           position: relative;
+        }
+        .calendario {
+           overflow: hidden;
+           border-radius: 25px;
+           background: #f4f4fa;
+        }
+
+        .cartao-calendario {
+          background: white;
+          border-end-end-radius: 24px;
+          border-end-start-radius: 24px;
+          padding: 20px 15px;
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+          position: relative;
         }
 
         .dias-semana, .dias {
@@ -177,7 +201,11 @@
         /* Eventos */
 
         .eventos {
-            margin-top: 30px;
+           margin-top: 25px;
+           padding: 0 0 20px;
+           background-color: transparent;
+           box-shadow: none;
+           border-radius: 0;
         }
 
         .titulo-eventos {
@@ -192,12 +220,13 @@
         .titulo-eventos h3 {
             font-size: 18px;
             font-weight: bold;
-            margin: 0;
+            margin-left: 5%;
         }
 
         .titulo-eventos span {
             color: #999;
             font-size: 12px;
+            margin-right: 5%;
         }
 
         .card-evento {
@@ -253,30 +282,139 @@
             font-size: 13px;
         }
 
-        @media (max-width: 600px) {
-            .pagina {
-                margin: 10px auto;
-                padding: 8px;
-            }
+        
+/* CELULARES */
+@media (max-width: 600px) {
 
-            .cabecalho {
-                padding: 20px;
-            }
+    body {
+        overflow-x: hidden;
+    }
 
-            .conteudo {
-                padding: 15px;
-            }
+    .pagina {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 8px;
+    }
 
-            .dia {
-                min-height: 48px;
-                font-size: 12px;
-            }
+    .calendario {
+        width: 100%;
+        border-radius: 22px;
+    }
 
-            .dias-semana, .dias {
-                gap: 3px;
-            }
+    /* Cabeçalho roxo */
+    .cabecalho {
+        padding: 20px 16px 75px;
+        border-radius: 22px 22px 35px 35px;
+    }
 
-            .topo h1 {
-                font-size: 21px;
-            }
-        }
+    .topo {
+        gap: 8px;
+    }
+
+    .topo h1 {
+        font-size: 21px;
+    }
+
+    .visualizacao {
+        padding: 3px;
+    }
+
+    .visualizacao button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Navegação do mês */
+    .navegacao {
+        margin-top: 22px;
+    }
+
+    .navegacao h2 {
+        font-size: 16px;
+    }
+
+    .navegacao button {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Corpo do calendário */
+    .conteudo {
+        margin-top: -45px;
+        padding: 0 12px 20px;
+    }
+
+    .cartao-calendario {
+        padding: 18px 10px;
+        border-radius: 0 0 22px 22px;
+    }
+
+    /* Dias da semana */
+    .dias-semana,
+    .dias {
+        gap: 2px;
+    }
+
+    .dias-semana {
+        margin-bottom: 10px;
+    }
+
+    .dias-semana div {
+        font-size: 10px;
+    }
+
+    .dia {
+        min-height: 48px;
+        font-size: 12px;
+        border-radius: 9px;
+    }
+
+    /* Legenda */
+    .legenda {
+        gap: 10px;
+        margin-top: 18px;
+        padding-top: 14px;
+    }
+
+    .legenda span {
+        font-size: 10px;
+        gap: 4px;
+    }
+
+    /* Eventos */
+    .eventos {
+        margin-top: 22px;
+        padding-bottom: 10px;
+    }
+
+    .titulo-eventos {
+        margin-bottom: 14px;
+    }
+
+    .titulo-eventos h3 {
+        font-size: 16px;
+    }
+
+    .titulo-eventos span {
+        font-size: 10px;
+    }
+
+    .card-evento {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .informacoes h4 {
+        font-size: 13px;
+    }
+
+    .informacoes p {
+        font-size: 10px;
+    }
+
+    .tipo {
+        font-size: 9px;
+        padding: 5px 6px;
+    }
+}

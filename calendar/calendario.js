@@ -33,8 +33,25 @@
                 local: "Plataforma",
                 tipo: "tarefa"
             }
-        ]
+        ],
+        
+        "2026-11-29": [
+            {
+                titulo: "Prova de Fisica",
+                horario: "08:00 - 10:30",
+                local: "Sala 502",
+                tipo: "prova"
+            },
 
+            {
+                titulo: "Atividade de geografia",
+                horario: "Até 23:59",
+                local: "plataforma",
+                tipo: "tarefa"
+            }
+        ]
+    
+        
     };
 
     const nomesMeses = [
