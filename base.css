@@ -178,3 +178,18 @@ body {
   border-color: var(--bs-primary);
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.2);
 }
+
+
+/* ---------- 7. TÍTULO E SUBTÍTULO DE PÁGINA ---------- */
+.titulo-pagina {
+  margin-bottom: 0.25rem;
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .titulo-pagina { font-size: 1.75rem; }
+}
+.subtitulo-pagina {
+  margin-bottom: 1.5rem;
+  color: var(--bs-secondary-color);
+}

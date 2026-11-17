@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Notificações</title>
+
+    <!-- Fonte, Bootstrap e Bootstrap Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Nossos estilos: base (compartilhado) vem primeiro, depois o da tela -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="notificacoes.css">
+</head>
+<body>
+
+<!-- ===== BARRA DO TOPO ===== -->
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a href="usuario.html" class="topo-marca">
+      <span class="tam-40 cor-primaria"><i class="bi bi-mortarboard-fill"></i></span>
+      <span>EduConnect</span>
+    </a>
+    <nav class="topo-menu" aria-label="Principal">
+      <a href="#" class="topo-link"><i class="bi bi-house-fill"></i><span class="topo-texto">Início</span></a>
+      <a href="#" class="topo-link"><i class="bi bi-megaphone-fill"></i><span class="topo-texto">Mural</span></a>
+      <a href="#" class="topo-link"><i class="bi bi-calendar-event-fill"></i><span class="topo-texto">Calendário</span></a>
+      <a href="notificacoes.html" class="topo-link ativo" aria-current="page">
+        <i class="bi bi-bell-fill"></i><span class="topo-texto">Avisos</span>
+        <span class="ponto-aviso" id="pontoAviso"></span>
+      </a>
+      <a href="usuario.html" class="topo-link"><span class="topo-avatar">RO</span><span class="topo-texto">Perfil</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== CONTEÚDO ===== -->
+<div class="container pagina">
+  <main class="notificacoes">
+
+    <!-- Título + botão -->
+    <div class="cabecalho">
+      <h1 class="titulo-pagina">Notificações</h1>
+      <button type="button" class="botao-suave" id="marcarLidas">Marcar como lidas</button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros" role="group" aria-label="Filtrar notificações">
+      <button type="button" class="filtro ativo" data-filtro="todas">Todas</button>
+      <button type="button" class="filtro" data-filtro="urgentes">Urgentes</button>
+      <button type="button" class="filtro" data-filtro="academico">Acadêmico</button>
+      <button type="button" class="filtro" data-filtro="mural">Mural</button>
+    </div>
+
+    <!-- ----- NOVAS ----- -->
+    <section class="grupo" id="grupoNovas">
+      <h2 class="grupo-titulo">Novas <span class="contador" id="contador">3</span></h2>
+      <div class="lista">
+
+        <article class="notificacao notificacao-nova borda-vermelha" data-categorias="urgentes academico">
+          <div class="tam-40 cor-vermelho"><i class="bi bi-exclamation-triangle-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Prova de Cálculo amanhã</h3>
+            <p class="notificacao-texto">Não esqueça: a prova presencial inicia às 08:00 no Bloco C.</p>
+            <span class="notificacao-hora">Há 5 min</span>
+          </div>
+          <span class="ponto-novo"></span>
+        </article>
+
+        <article class="notificacao notificacao-nova borda-primaria" data-categorias="academico">
+          <div class="tam-40 cor-primaria"><i class="bi bi-mortarboard-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Nova Nota: Física III</h3>
+            <p class="notificacao-texto">Sua nota da 2ª parcial já está disponível no sistema acadêmico.</p>
+            <span class="notificacao-hora">Há 15 min</span>
+          </div>
+          <span class="ponto-novo"></span>
+        </article>
+
+        <article class="notificacao notificacao-nova borda-verde" data-categorias="mural">
+          <div class="tam-40 cor-verde"><i class="bi bi-megaphone-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Novo Post no Mural</h3>
+            <p class="notificacao-texto">Coordenadoria: Inscrições abertas para a Monitoria de 2024.</p>
+            <span class="notificacao-hora">Hoje, 09:30</span>
+          </div>
+          <span class="ponto-novo"></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ----- ANTERIORES ----- -->
+    <section class="grupo">
+      <h2 class="grupo-titulo">Anteriores</h2>
+      <div class="lista" id="listaAnteriores">
+
+        <article class="notificacao notificacao-lida" data-categorias="academico">
+          <div class="tam-40 cor-neutra"><i class="bi bi-chat-dots-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Mensagem de Prof. Ricardo</h3>
+            <p class="notificacao-texto">“Olá, acabei de enviar os materiais extras sobre a aula...”</p>
+            <span class="notificacao-hora">Ontem, 16:45</span>
+          </div>
+        </article>
+
+        <article class="notificacao notificacao-lida" data-categorias="mural">
+          <div class="tam-40 cor-neutra"><i class="bi bi-calendar-check-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Evento: Workshop de IA</h3>
+            <p class="notificacao-texto">Lembrete: O workshop começará em 2 horas no auditório principal.</p>
+            <span class="notificacao-hora">20 Jun, 08:00</span>
+          </div>
+        </article>
+
+        <article class="notificacao notificacao-lida" data-categorias="">
+          <div class="tam-40 cor-neutra"><i class="bi bi-file-earmark-text-fill"></i></div>
+          <div class="notificacao-corpo">
+            <h3 class="notificacao-titulo">Boleto Disponível</h3>
+            <p class="notificacao-texto">O boleto da mensalidade de Julho já está disponível para consulta.</p>
+            <span class="notificacao-hora">18 Jun, 14:20</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  // ----- Filtros: mostra só as notificações da categoria escolhida -----
+  const filtros = document.querySelectorAll(".filtro");
+  const cartoes = () => document.querySelectorAll(".notificacao");
+
+  filtros.forEach((botao) => {
+    botao.addEventListener("click", () => {
+      filtros.forEach((f) => f.classList.remove("ativo"));
+      botao.classList.add("ativo");
+      const escolhido = botao.dataset.filtro;
+      cartoes().forEach((c) => {
+        const categorias = c.dataset.categorias.split(" ");
+        c.hidden = escolhido !== "todas" && !categorias.includes(escolhido);
+      });
+      // esconde o grupo inteiro quando não sobra nenhum cartão nele
+      document.querySelectorAll(".grupo").forEach((g) => {
+        g.hidden = !g.querySelector(".notificacao:not([hidden])");
+      });
+    });
+  });
+
+  // ----- Marcar como lidas: as novas viram "anteriores" -----
+  document.getElementById("marcarLidas").addEventListener("click", (e) => {
+    const anteriores = document.getElementById("listaAnteriores");
+    [...document.querySelectorAll(".notificacao-nova")].reverse().forEach((c) => {
+      c.className = "notificacao notificacao-lida";
+      c.querySelector(".tam-40").className = "tam-40 cor-neutra";
+      c.querySelector(".ponto-novo")?.remove();
+      anteriores.prepend(c);
+    });
+    document.getElementById("grupoNovas").hidden = true;
+    document.getElementById("pontoAviso").hidden = true;
+    e.currentTarget.disabled = true;
+  });
+</script>
+</body>
+</html>

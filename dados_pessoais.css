@@ -37,19 +37,6 @@
   text-decoration: none;
 }
 
-.titulo-pagina {
-  margin-bottom: 0.25rem;
-  font-size: calc(1.3rem + 0.6vw);
-  font-weight: 700;
-}
-@media (min-width: 1200px) {
-  .titulo-pagina { font-size: 1.75rem; }
-}
-.subtitulo-pagina {
-  margin-bottom: 1.5rem;
-  color: var(--bs-secondary-color);
-}
-
 /* Caixa verde "Dados salvos com sucesso!" */
 .aviso { border-radius: var(--bs-border-radius-xl); }
 
