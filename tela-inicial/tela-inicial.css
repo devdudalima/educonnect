@@ -23,8 +23,39 @@ body {
     margin: 0;
 }
 
+.menu-hamburguer {
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-hamburguer.fora {
+    background-color: var(--cor-03);
+    color: white;
+    box-shadow: 0 0 10px #4438ca85;
+
+    position: fixed;
+    
+    right: 0;
+    margin: 5px;
+    padding: 10px 10px;
+    width: 24px;
+
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+.menu-hamburguer.dentro {
+    display: flex;
+    justify-content: end;
+}
+
 .menu {
 
+    right: 0;
     position: fixed;
     width: 170px;
     height: 100vh;
@@ -32,13 +63,15 @@ body {
 
     background-color: white;
     padding: 25px 10px;
-    display: flex;
+    display: none;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     z-index: 500;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
 }
+
+
 
 .menu h2 {
     text-align: center;
@@ -48,7 +81,7 @@ body {
 }
 
 .texto-menu {
-    margin: 14px 0;
+    margin: 5px 0 34px;
 }
 
 .subtitulo-menu {
@@ -58,6 +91,12 @@ body {
     font-size: 0.8em;
     font-weight: 500;
     color: rgba(196, 151, 248, 0.747);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .pagina-button {
@@ -480,6 +519,27 @@ nav a:hover {
 
 
 @media screen and (min-width: 1150px) {
+
+    .menu {
+        display: flex;
+        left: 0;
+        width: 250px;
+    }
+
+    .menu h2 {
+        font-size: 1.9em;
+    }
+
+    .menu-hamburguer.fora {
+        margin: 16px;
+        padding: 12px;
+        left: 0;
+    }
+
+    .menu-hamburguer.dentro {
+    justify-content: start;
+    }
+
 
     #cabecalho {
         padding: 40px 100px 80px 100px;
