@@ -23,6 +23,71 @@ body {
     margin: 0;
 }
 
+.menu {
+
+    position: fixed;
+    width: 170px;
+    height: 100vh;
+    
+
+    background-color: white;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 500;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+
+.menu h2 {
+    text-align: center;
+    color: #312E81;
+    padding: 0;
+    margin: 0;
+}
+
+.texto-menu {
+    margin: 14px 0;
+}
+
+.subtitulo-menu {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: rgba(196, 151, 248, 0.747);
+}
+
+.pagina-button {
+    padding: 14px;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.pagina-button:hover {
+    background-color: var(--cor-05);
+    color: white;
+    box-shadow: 0 0 10px #4e46e57a;
+    transform: translateY(-5px);
+
+    a , svg {
+    color: white;
+}
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+}
+
+.menu svg {
+    color: rgb(90, 90, 90);
+    margin-right: 2px;
+}
+
 main , nav , #recomendacoes {
     margin: 0 15px;
 }
